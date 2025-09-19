@@ -39,7 +39,7 @@ const renderGifts = async () =>{
     }
 }
 
-renderGifts();
+
 
 const renderGift = async () => {
     const requestedID = parseInt(window.location.href.split('/').pop());
@@ -68,6 +68,9 @@ const requestedUrl = window.location.href.split('/').pop()
 
 if (requestedUrl.size >3) {
     window.location.href = '../notFound.html'
+}
+else if (requestedUrl.size ==2 ){
+    renderGifts();
 }
 else{
     renderGift();
