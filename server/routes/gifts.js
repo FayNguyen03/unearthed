@@ -18,7 +18,16 @@ router.get('/', GiftsController.getGifts);
 
 //router.get('/:giftId', (req, res) => {
     //res.status(200).sendFile(path.resolve(__dirname, '../public/gift.html'));
-    router.get('/:giftId', GiftsController.getGiftById);
+router.get('/:giftId', GiftsController.getGiftById);
 //})
+
+//POST
+router.post('/', GiftsController.createGift);
+
+//DELETE
+router.delete('/:id', GiftsController.deleteGift);
+
+//PATCH
+router.patch('/:id', GiftsController.updateGift);
 
 export default router;
